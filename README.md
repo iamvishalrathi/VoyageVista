@@ -1,6 +1,6 @@
 # **VoyageVista App**
 🧭
-<img src="https://github.com/iamvishalrathi/Voyage-Vista-Project/blob/main/public/assets/logo.png" alt="Sample Image" width="50"/>
+<img src="https://github.com/iamvishalrathi/Voyage-Vista-Project/blob/main/public/assets/logo.png" alt="Sample Image" width="10"/>
 Welcome to **VoyageVista** !
 
 This web application is your go-to platform for finding and listing hotels and motels across various locations. Whether you're searching for accommodation or looking to add your own hotel listings, VoyageVista makes it easy and efficient. Below, you'll find everything you need to know to set up and use the app.
