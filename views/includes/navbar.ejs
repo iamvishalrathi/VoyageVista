@@ -1,0 +1,130 @@
+<style>
+  .navbar-collapse{
+    background-color: white;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    a{
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    }
+  .search-btn{
+    background-color: #fe424d;
+    color: white;
+    &:hover{
+      color: white;
+      background-color: #fe424d;
+    }
+    i:hover{
+      color: white;
+      background-color: #fe424d;
+    }
+    p{
+      margin: auto;
+      display: none;
+    }
+  }
+  .unclicked{
+    border-radius: 50%;
+    margin: 0.75rem;
+    align-items: center;
+  }
+  .clicked{
+    border-radius: 2rem;
+    margin: 0.4rem;
+    display: flex;
+    align-items: center;
+  }
+  .search-box{
+    border-radius: 35px;
+    display: flex;
+    padding: 0%;
+    height: 4rem;
+    transition: background-color 0.5s ease;
+    &:hover{
+      background-color: #DEDEDE;
+    }
+  }
+  .inner-search-box{
+    border: none;
+    height: 3.9rem;
+  }
+  .search-inp{
+    border: 0px;
+    border-radius: 35px;
+    margin-right: 0.1rem;
+    padding-right: 0% !important;
+    display: flex;
+    transition: background-color 0.5s ease;
+    &:hover{
+      background-color: #DEDEDE;
+    }
+    &:focus {
+    outline: none; /* Remove the default outline */
+    box-shadow: none; /* Remove the Bootstrap box-shadow */
+    }
+  }
+</style>
+<nav class="navbar navbar-expand-xl navbar-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-regular fa-compass"> Voyage Vista</i>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search" method="get" action="/listings/search">
+          <div class="form-control search-box" id="search-box">
+            <div class="form-control search-box inner-search-box">
+              <input class="form-control search-inp" type="search" placeholder="Search destinations" name="destination">
+              <input class="form-control search-inp" type="search" placeholder="Search country" name="country">
+              <input class="form-control search-inp" type="search" placeholder="Search city" name="city">
+            </div>
+            <button class="btn search-btn unclicked" id="search-btn" type="submit">
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              <p id="search">&nbsp;&nbsp;&nbsp;Search</p>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">VoyageVista your home</a>
+        <% if (!currUser) { %>
+          <a class="nav-link nav-link-btn" aria-current="page" href="/signup"><b>Signup</b></a>
+          <a class="nav-link nav-link-btn" href="/login"><b>Login</b>&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+        <% } %>
+        <% if (currUser) { %>
+          <a class="nav-link nav-link-btn" href="/logout"><b>Logout</b>&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  let box = document.getElementById('search-box');
+  let search = document.getElementById("search");
+  let searchBtn = document.getElementById("search-btn");
+  document.addEventListener('click', function(event) {
+    // Check if the click was outside the button
+    if (!box.contains(event.target)) {
+      searchBtn.classList.remove('clicked');
+      search.style.display = 'none';
+    }
+});
+
+  box.addEventListener('click', function(event) {
+    console.log(searchBtn);
+    search.style.display= "block";
+    searchBtn.classList.add('clicked');
+    // searchBtn.classList.remove('unclicked');
+    event.stopPropagation(); // Prevents the event from bubbling up to the document
+});
+
+</script>

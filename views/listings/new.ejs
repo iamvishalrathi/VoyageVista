@@ -1,0 +1,61 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h1>Create New Listing</h1>
+            <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data"> <!-- Bootstrap Required Field -->
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="listing[title]" placeholder="Enter Title" class="form-control" required>
+                    <div class="invalid-feedback">Enter Valid Title</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" placeholder="Enter Description" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Enter Valid Description</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input type="file" name="listing[image]" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="listing[category]" id="category" class="form-control" required>
+                        <option value="" disabled selected>Select the category</option>
+                        <option value="None">None</option>
+                        <option value="Amazing Pools">Amazing Pools</option>
+                        <option value="Arctic">Arctic</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Trending">Trending</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Iconic Cities">Iconic Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Domes">Domes</option>
+                        <option value="Boats">Boats</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" name="listing[price]" placeholder="1200" class="form-control" required>
+                        <div class="invalid-feedback">Enter Valid Price</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                        <div class="invalid-feedback">Enter Valid Country</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">City</label>
+                    <input type="text" name="listing[location]" placeholder="Jaipur" class="form-control" required>
+                    <div class="invalid-feedback">Enter Valid City</div>
+                </div>
+                <button class="btn btn-dark add-btn">Add</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,129 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    /* To occupy full view. Rest space is occupied by footer */
+    flex: 1;
+}
+
+/* Navbar */
+.navbar{
+    height: 6rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition: color 0.3s ease;
+    &:hover{
+        color: black; /* Background color on hover */
+    }
+}
+
+.nav-link{
+    color: black !important; /* To override custom styling of bootstrap */
+    border-radius: 20rem;
+    padding: 0.5rem 1rem !important;
+    align-items: center !important;
+    align-content: center !important;
+    transition: background-color 0.5s ease !important;
+    &:hover{
+        background-color:#F0F0F0;
+    }
+}
+.nav-link-btn{
+    border: 1px solid rgb(192, 192, 192) !important;
+    margin-left: 0.2rem;
+    transition: box-shadow 0.5s ease !important;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        background-color: white !important;
+    }
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    background-color: #ebebeb;
+    height: 8rem;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 1rem; 
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0% !important;
+}
+
+.listing-link{
+    text-decoration: none;
+    color: black;
+}
+
+/* Card Effects */
+.card-img-overlay{
+    opacity: 0;
+    &:hover{
+        opacity: 0.2;
+        background-color: white;
+    }
+}
+
+/* New & Edit Page */
+.add-btn, .edit-btn{
+    background-color: #fe424d !important;
+    border: none !important; 
+}
+
+/* Show Page */
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+/* Map */
+#map { 
+    height: 400px;
+    width: 100vh; 
+}
