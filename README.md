@@ -1,4 +1,4 @@
-# **<img src="https://github.com/iamvishalrathi/Voyage-Vista-Project/blob/main/public/assets/logo.png" alt="Sample Image" width="15"/> VoyageVista App**
+# **<img src="https://github.com/iamvishalrathi/Voyage-Vista-Project/blob/main/public/assets/logo.png" alt="Sample Image" width="25"/> VoyageVista App**
 Welcome to **VoyageVista** !
 
 This web application is your go-to platform for finding and listing hotels and motels across various locations. Whether you're searching for accommodation or looking to add your own hotel listings, VoyageVista makes it easy and efficient. Below, you'll find everything you need to know to set up and use the app.
@@ -41,7 +41,7 @@ Set up your environment variables by creating a `.env` file based on the provide
 ### **4. Start the Application**
 Launch the application using:
 ```bash
-npm nodemon app.js
+nodemon app.js
 ```
 
 ### **5. Access the Application**
