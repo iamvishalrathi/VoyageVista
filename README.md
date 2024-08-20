@@ -19,7 +19,7 @@ You can explore VoyageVista live by visiting the website:
 Take a look at the features, search for hotels, and try adding a listing to see how it works!
 
 ### **Screenshot**
-![image](https://github.com/vin-00/TravelNest/assets/132657698/b88a01f0-af91-4e7f-bf66-7948ffb909ec)
+![image](https://github.com/iamvishalrathi/Voyage-Vista-Project/blob/main/public/assets/Screenshot.png)
 
 ##  **Installation**
 
