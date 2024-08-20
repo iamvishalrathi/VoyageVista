@@ -14,7 +14,7 @@ This web application is your go-to platform for finding and listing hotels and m
 
 You can explore VoyageVista live by visiting the website:
 
-[**VoyageVista - Preview the App**](https://voyage-vista-project.onrender.com)
+[**VoyageVista - Preview the App**](https://voyage-vista-project.onrender.com/listings)
 
 Take a look at the features, search for hotels, and try adding a listing to see how it works!
 
