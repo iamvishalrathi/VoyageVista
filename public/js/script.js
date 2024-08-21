@@ -36,3 +36,16 @@ box.addEventListener('click', function (event) {
   // searchBtn.classList.remove('unclicked');
   event.stopPropagation(); // Prevents the event from bubbling up to the document
 });
+
+//Tax Switch
+let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+taxSwitch.addEventListener("click", ()=>{
+    let taxInfo = document.getElementsByClassName("tax-info");
+    for (info of taxInfo) {
+        if (info.style.display!= "inline") {
+            info.style.display= "inline";
+        } else {
+            info.style.display= "none";
+        }
+    }
+});
