@@ -1,33 +1,112 @@
-.navbar{
+.navbar {
     height: 6rem;
     background-color: white;
 }
 
-.fa-compass{
-    color: #fe424d;
-    font-size: 2rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    transition: color 0.3s ease;
-    &:hover{
-        color: black; /* Background color on hover */
+.navbar-collapse {
+    background-color: white;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    a {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
 }
 
-.nav-link{
-    color: black !important; /* To override custom styling of bootstrap */
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: black;
+    }
+}
+
+/* Search */
+.search-box {
+    border-radius: 35px !important;
+    display: flex !important;
+    padding: 0% !important;
+    height: 4rem !important;
+    transition: background-color 0.5s ease !important;
+
+    &:hover {
+        background-color: #DEDEDE;
+    }
+}
+
+.inner-search-box {
+    border: 0px !important;
+    height: 3.9rem !important;
+    padding-right: 0% !important;
+}
+
+.search-inp {
+    border: 0px !important;
+    border-radius: 35px !important;
+    margin-right: 0.1rem;
+    padding-right: 0% !important;
+    transition: background-color 0.5s ease !important;
+
+    &:hover {
+        background-color: #DEDEDE;
+    }
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: #DEDEDE !important;
+    }
+}
+
+.search-btn {
+    background-color: #fe424d !important;
+    color: white !important;
+
+    p {
+        margin: auto;
+        display: none;
+    }
+}
+
+.unclicked {
+    border-radius: 50% !important;
+    margin: 0.75rem !important;
+}
+
+.clicked {
+    border-radius: 2rem !important;
+    margin: 0.4rem !important;
+    display: flex !important;
+    align-items: center;
+}
+
+/* Nav-Links */
+.nav-link {
+    color: black !important;
+    /* To override custom styling of bootstrap */
     border-radius: 20rem;
     padding: 0.5rem 1rem !important;
     align-items: center !important;
     align-content: center !important;
     transition: background-color 0.5s ease !important;
-    &:hover{
-        background-color:#F0F0F0;
+
+    &:hover {
+        background-color: #F0F0F0;
     }
 }
-.nav-link-btn{
+
+.nav-link-btn {
     border: 1px solid rgb(192, 192, 192) !important;
     margin-left: 0.2rem;
     transition: box-shadow 0.5s ease !important;
+
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         background-color: white !important;
