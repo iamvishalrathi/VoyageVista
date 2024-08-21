@@ -1,7 +1,9 @@
+//Env Config
 if (process.env.NODE_ENV != "production") {
     require('dotenv').config();
 };
 
+//Require
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -35,9 +37,8 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
 
+//Atlas Mongo Store Middleware
 const dbUrl = process.env.ATLASDB_URL;
-
-//Mongo Store Middleware
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
@@ -45,7 +46,6 @@ const store = MongoStore.create({
     },
     touchAfter: 24*3600,
 });
-
 store.on("error", ()=>{
     console.log("ERROR in MONGO SESSION STORE", err);
 });
@@ -80,7 +80,6 @@ main()
     console.log("Connection to DB");
 })
 .catch((err) => console.log(err));
-
 async function main() {
     await mongoose.connect(dbUrl); 
 }
@@ -93,17 +92,6 @@ app.use((req,res,next)=>{
     // console.log(res.locals.success);
     next();
 });
-
-//DemoUser
-// app.get("/demouser", async(req,res)=>{
-//     let fakeUser= new User({
-//         email: "abc@gmail.com",
-//         username: "abcd"
-//     });
-
-//     let registeredUser= await User.register(fakeUser, "abcd");
-//     res.send(registeredUser);
-// });
 
 //listingRouter
 app.use("/listings", listingRouter);
