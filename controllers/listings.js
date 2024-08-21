@@ -68,10 +68,13 @@ module.exports.searchListings = async (req, res) => {
         // Check if all three arrays are empty
         if (listing1.length === 0 && listing2.length === 0 && listing3.length === 0) {
             return [];
-        } else if ((destination!=[] && listing1.length === 0) || (country!=[] && listing2.length === 0) || (city!=[] && listing3.length === 0)) {
-            console.log("Inside")
+        }
+
+        // Check if any wrong combination is added
+        if ((destination!=[] && listing1.length === 0) || (country!=[] && listing2.length === 0) || (city!=[] && listing3.length === 0)) {
             return [];
         }
+
         // Check if two arrays are empty
         if (listing1.length === 0 && listing2.length === 0) {
             return listing3;
@@ -82,6 +85,7 @@ module.exports.searchListings = async (req, res) => {
         if (listing2.length === 0 && listing3.length === 0) {
             return listing1;
         }
+
         // One array empty
         if (listing1.length === 0) {
             return listing2.filter(item1 => 
@@ -98,6 +102,7 @@ module.exports.searchListings = async (req, res) => {
                 listing1.some(item2 => item1._id.toString() === item2._id.toString())
             );
         }
+        
         // No array is empty
         else{
             return listing1.filter(item1 => 
