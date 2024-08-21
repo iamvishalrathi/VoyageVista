@@ -37,7 +37,7 @@ module.exports.isValidSearch = (req,res,next)=>{
 };
 
 module.exports.isAuthorisedUser = (req,res,next)=>{
-    const authorisedUsers= ["user2","random"];
+    const authorisedUsers= ["user2","user3","random"];
     for (const user of authorisedUsers) {
         if (user===res.locals.currUser.username) {
             return next();
