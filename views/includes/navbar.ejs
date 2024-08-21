@@ -1,11 +1,16 @@
 <nav class="navbar navbar-expand-xl navbar-light border-bottom sticky-top">
   <div class="container-fluid">
+    <!-- Logo -->
     <a class="navbar-brand" href="/listings">
       <i class="fa-regular fa-compass"> Voyage Vista</i>
     </a>
+
+    <!-- Toggle Button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Search Bar -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <form class="d-flex" role="search" method="get" action="/listings/search">
@@ -23,6 +28,7 @@
         </form>
       </div>
 
+      <!-- Nav Links -->
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">VoyageVista your home</a>
         <% if (!currUser) { %>
