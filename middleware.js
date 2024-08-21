@@ -22,17 +22,6 @@ module.exports.isValidSearch = (req,res,next)=>{
     next();
 };
 
-// module.exports.saveSearch = (req,res,next)=>{
-//     if (req.query) {
-//         let {destination,country,city}= req.query
-//         res.locals.destination= destination;
-//         res.locals.country= country;
-//         res.locals.city= city;
-//         return
-//     }
-//     next();
-// };
-
 module.exports.saveRedirectUrl = (req,res,next)=>{
     req.session.redirectUrl = req.originalUrl;
     res.locals.redirectUrl = req.session.redirectUrl;
