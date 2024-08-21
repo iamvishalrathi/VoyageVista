@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //Atlas Mongo Store Middleware
 const dbUrl = process.env.ATLASDB_URL;
+// const MONGO_URL = 'mongodb://127.0.0.1:27017/wanderlust';
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
