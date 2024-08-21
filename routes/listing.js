@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync= require("../utils/wrapAsync.js");
 const Listing = require("../models/listing.js");
-const { saveRedirectUrl, isLoggedIn, isOwner, validateListing, savedRedirectUrl, isValidSearch} = require("../middleware.js");
+const { saveRedirectUrl, isLoggedIn, isOwner, validateListing, savedRedirectUrl, isValidSearch, isAuthorisedUser} = require("../middleware.js");
 
 const multer  = require('multer');
 const {storage} = require("../cloud-config.js");
@@ -15,7 +15,7 @@ router
     //Index Route
     .get(saveRedirectUrl, wrapAsync(listingController.index))
     //Create Route
-    .post(saveRedirectUrl, isLoggedIn ,upload.single('listing[image]'), validateListing, wrapAsync(listingController.createListing));
+    .post(saveRedirectUrl, isLoggedIn , isAuthorisedUser, upload.single('listing[image]'), validateListing, wrapAsync(listingController.createListing));
 
 //New Route
 router.get("/new", saveRedirectUrl, isLoggedIn, listingController.renderNewForm);
