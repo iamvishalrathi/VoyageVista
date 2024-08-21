@@ -6,8 +6,7 @@ body{
 }
 
 .container{
-    /* To occupy full view. Rest space is occupied by footer */
-    flex: 1;
+    flex: 1; /* To occupy full view. Rest space is occupied by footer */
 }
 
 /* Cards */
