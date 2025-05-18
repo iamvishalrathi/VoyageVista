@@ -4,16 +4,17 @@
     .sticky-navbar {
         top: 6rem !important;
         position: sticky;
-        z-index: 1; /* Ensure it sits above other content */
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
     }
     @media (max-width: 1200px) {
         .sticky-navbar {
-            height: 12rem;
+            height: 10rem; /* Adjusted height */
         }
     }
     @media (max-width: 767px) {
         .sticky-navbar {
-            height: 15rem;
+            height: 8rem; /* Adjusted height */
         }
     }
     @media (max-width: 468px) {

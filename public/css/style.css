@@ -12,9 +12,14 @@ body{
 /* Cards */
 .listing-card{
     border: none !important;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
 }
 
+.listing-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
 .card-img-top{
     border-radius: 1rem !important;
     width: 100% !important;
