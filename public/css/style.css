@@ -10,23 +10,24 @@ body{
 }
 
 /* Cards */
-.listing-card{
+.listing-card {
     border: none !important;
     margin-bottom: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 8px;
 }
 
 .listing-card:hover {
-    transform: translateY(-10px); /* Lift effect */
+    transform: translateY(-8px); /* Lift effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
-}
-.card-img-top{
-    border-radius: 1rem !important;
-    width: 100% !important;
-    object-fit: cover !important;
+    background-color: #fff;
+    padding: 8px;
+    transition: all 0.3s ease;
 }
 
-.card-body{
+.card-body {
     padding: 0% !important;
 }
 
@@ -63,4 +64,15 @@ body{
 #map { 
     height: 400px;
     width: 100vh; 
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2d3436;
+}
+
+.card-text {
+    color: #636e72;
+    font-size: 0.95rem;
 }

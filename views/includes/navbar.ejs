@@ -1,43 +1,41 @@
-<nav class="navbar navbar-expand-xl navbar-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-xl navbar-light border-bottom sticky-top" style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
   <div class="container-fluid">
     <!-- Logo -->
-    <a class="navbar-brand" href="/listings">
-      <i class="fa-regular fa-compass"> Voyage Vista</i>
+    <a class="navbar-brand d-flex align-items-center" href="/listings" style="font-size: 1.5rem; font-weight: bold; color: #fe424d;">
+      <i class="fa-regular fa-compass me-2" style="font-size: 1.7rem;"></i>
+      <span style="font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;">Voyage Vista</span>
     </a>
-
     <!-- Toggle Button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <!-- Collapse Container -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <!-- Search Bar -->
       <div class="navbar-nav ms-auto">
         <form class="d-flex" role="search" method="get" action="/listings/search">
-          <div class="form-control search-box" id="search-box">
-            <div class="form-control search-box inner-search-box">
-              <input class="form-control search-inp" type="search" placeholder="Search destinations" name="destination">
-              <input class="form-control search-inp" type="search" placeholder="Search country" name="country">
-              <input class="form-control search-inp" type="search" placeholder="Search city" name="city">
+          <div class="form-control search-box" id="search-box" style="background: #f8f9fa; border-radius: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border: none; min-width: 320px;">
+            <div class="form-control search-box inner-search-box" style="background: transparent; border: none; box-shadow: none; display: flex; gap: 0.5rem;">
+              <input class="form-control search-inp" type="search" placeholder="Destination" name="destination" style="border: none; background: transparent; box-shadow: none;">
+              <input class="form-control search-inp" type="search" placeholder="Country" name="country" style="border: none; background: transparent; box-shadow: none;">
+              <input class="form-control search-inp" type="search" placeholder="City" name="city" style="border: none; background: transparent; box-shadow: none;">
             </div>
-            <button class="btn search-btn unclicked" id="search-btn" type="submit">
+            <button class="btn search-btn" id="search-btn" type="submit" style="background: #fe424d; color: #fff; border-radius: 2rem; margin-left: 0.5rem; padding: 0.4rem 1.2rem; font-weight: 500; display: flex; align-items: center; border: none; transition: background 0.2s;">
               <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-              <p id="search">&nbsp;&nbsp;&nbsp;Search</p>
+              <span id="search" style="margin-left: 0.5rem;">Search</span>
             </button>
           </div>
         </form>
       </div>
-
       <!-- Nav Links -->
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">VoyageVista your home</a>
+      <div class="navbar-nav ms-auto" style="gap: 0.5rem;">
+        <a class="nav-link" href="/listings/new" style="font-weight: 500;">VoyageVista your home</a>
         <% if (!currUser) { %>
-          <a class="nav-link nav-link-btn" aria-current="page" href="/signup"><b>Signup</b></a>
-          <a class="nav-link nav-link-btn" href="/login"><b>Login</b>&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+          <a class="nav-link nav-link-btn" aria-current="page" href="/signup" style="border-radius: 1.5rem; border: 1px solid #fe424d; color: #fe424d; font-weight: bold; padding: 0.3rem 1rem; margin-right: 0.3rem; transition: background 0.2s, color 0.2s;">Signup</a>
+          <a class="nav-link nav-link-btn" href="/login" style="border-radius: 1.5rem; background: #fe424d; color: #fff; font-weight: bold; padding: 0.3rem 1rem; transition: background 0.2s, color 0.2s;">Login&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
         <% } %>
         <% if (currUser) { %>
-          <a class="nav-link nav-link-btn" href="/logout"><b>Logout</b>&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+          <a class="nav-link nav-link-btn" href="/logout" style="border-radius: 1.5rem; background: #fe424d; color: #fff; font-weight: bold; padding: 0.3rem 1rem; transition: background 0.2s, color 0.2s;">Logout&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
         <% } %>
       </div>
     </div>
